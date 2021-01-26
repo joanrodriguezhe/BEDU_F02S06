@@ -1,15 +1,15 @@
 // Ejemplo 1
-/* var car = {
+var car = {
     brand: 'Nissan',
     model: 'Sentra',
     year: '2021'
 }
 
 function addColor(car) {
-    return {...car,color:'Black'};
+    return { ...car, color: 'Black' };
 }
 
-console.log(`Before calling addColor() ${JSON.stringify(car)}`);
+/*console.log(`Before calling addColor() ${JSON.stringify(car)}`);
 
 var sameCar = addColor(car);
 
@@ -40,4 +40,16 @@ function addItemToCart(cart, item, quantity) {
 
 cart = addItemToCart(cart, 'Phone', 2);
 
-console.log(`Cart ${JSON.stringify(cart)}`)
+//console.log(`Cart ${JSON.stringify(cart)}`)
+
+//Ejemplo 3
+
+let number = 12345;
+let sum = number
+    .toString()
+    .split('')
+    .map(Number).
+    reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+
+console.log(number);
+console.log(sum);
