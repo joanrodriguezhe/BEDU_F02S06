@@ -57,22 +57,43 @@ let sum = number
 //Reto 1
 
 function flatten(arrays) {
-    return [...arrays].reduce((accumulator,currentValue)=>accumulator.concat(currentValue),[])
-  }
-  
-  var arrays = [[1, 2, 3], [4, 5], [6]];
-  var array = flatten(arrays);
-  
-  //console.log(array); // [1, 2, 3, 4, 5, 6]
+    return arrays.reduce((accumulator, currentValue) => accumulator.concat(currentValue), [])
+}
 
-  //Reto 2
+var arrays = [[1, 2, 3], [4, 5], [6]];
+var array = flatten(arrays);
 
-  function compact(array) {
-    return array.filter(el=>!!el);
-  }
-  
-  var array = [0, 1, false, 2, '', 3];
-  var compactedArray = compact(array);
-  
-  console.log(compactedArray); // [1, 2, 3]
-  
+//console.log(array); // [1, 2, 3, 4, 5, 6]
+
+//Reto 2
+
+function compact(array) {
+    return array.filter(Boolean);
+}
+
+var array = [0, 1, false, 2, '', 3];
+var compactedArray = compact(array);
+
+//console.log(compactedArray); // [1, 2, 3]
+
+//Reto 3
+
+function loop(start, test, update, body) {
+    while (test(start)) {
+        body(start);
+        start = update(start);
+    }
+}
+
+var test = function (n) {
+    return n > 0;
+}
+
+var update = function (n) {
+    return n - 1;
+}
+
+loop(3, test, update, console.log);
+  // 3
+  // 2
+  // 1
