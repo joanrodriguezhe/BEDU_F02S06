@@ -63,5 +63,16 @@ function flatten(arrays) {
   var arrays = [[1, 2, 3], [4, 5], [6]];
   var array = flatten(arrays);
   
-  console.log(array); // [1, 2, 3, 4, 5, 6]
+  //console.log(array); // [1, 2, 3, 4, 5, 6]
+
+  //Reto 2
+
+  function compact(array) {
+    return array.filter(el=>!!el);
+  }
+  
+  var array = [0, 1, false, 2, '', 3];
+  var compactedArray = compact(array);
+  
+  console.log(compactedArray); // [1, 2, 3]
   
