@@ -51,5 +51,17 @@ let sum = number
     .map(Number).
     reduce((accumulator, currentValue) => accumulator + currentValue, 0)
 
-console.log(number);
-console.log(sum);
+//console.log(number);
+//console.log(sum);
+
+//Reto 1
+
+function flatten(arrays) {
+    return [...arrays].reduce((accumulator,currentValue)=>accumulator.concat(currentValue),[])
+  }
+  
+  var arrays = [[1, 2, 3], [4, 5], [6]];
+  var array = flatten(arrays);
+  
+  console.log(array); // [1, 2, 3, 4, 5, 6]
+  
